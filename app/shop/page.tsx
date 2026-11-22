@@ -31,8 +31,10 @@ function Chip({ to, active, children }: { to: string; active: boolean; children:
       href={to}
       aria-current={active ? "true" : undefined}
       className={cn(
-        "border px-4 py-2 text-xs uppercase tracking-[0.14em] transition-colors",
-        active ? "border-burgundy bg-burgundy text-ivory" : "border-espresso/20 hover:border-burgundy",
+        "border px-4 py-2 text-xs uppercase tracking-[0.16em] transition-all duration-300",
+        active
+          ? "border-gold bg-burgundy text-gold-shimmer shadow-xs"
+          : "border-espresso/20 hover:border-gold hover:text-burgundy",
       )}
     >
       {children}

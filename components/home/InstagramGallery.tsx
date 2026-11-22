@@ -26,11 +26,11 @@ export function InstagramGallery() {
                   aria-label="View Maayil on Instagram"
                   className="group relative block aspect-square overflow-hidden bg-champagne/20"
                 >
-                  <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+                  <div className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105">
                     <ProductImage product={products[pi]} index={view} sizes="(min-width:1024px) 16vw, 33vw" />
                   </div>
-                  <span className="absolute inset-0 grid place-items-center bg-burgundy/55 text-ivory opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
-                    <InstagramIcon className="size-8" />
+                  <span className="absolute inset-0 grid place-items-center bg-gradient-to-t from-burgundy/85 via-burgundy/50 to-transparent text-gold-light opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+                    <InstagramIcon className="size-8 transition-transform duration-300 group-hover:scale-110" />
                   </span>
                 </a>
               </Reveal>

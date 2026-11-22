@@ -125,9 +125,9 @@ export function ProductActions({ product: p, sizeGuide }: { product: Product; si
           <Button onClick={addToBag} className="flex-1">
             <AddLabel added={added} />
           </Button>
-          <WishlistButton slug={p.slug} className="size-[3.1rem] border border-burgundy/30 bg-transparent" />
+          <WishlistButton slug={p.slug} className="size-[3.1rem] border border-gold/40 bg-transparent hover:border-gold" />
         </div>
-        <Button variant="outline" onClick={buyNow}>Buy Now</Button>
+        <Button variant="gold" onClick={buyNow}>Buy Now</Button>
       </div>
 
       <div>

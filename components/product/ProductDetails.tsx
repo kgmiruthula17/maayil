@@ -1,18 +1,18 @@
 import Link from "next/link";
 import type { Product } from "@/lib/products";
 
-const item = "group border-b border-champagne/60 py-4";
+const item = "group border-b border-gold/30 py-4.5 transition-colors";
 const summary =
-  "flex cursor-pointer list-none items-center justify-between text-xs uppercase tracking-[0.18em] [&::-webkit-details-marker]:hidden";
+  "flex cursor-pointer list-none items-center justify-between text-xs font-medium uppercase tracking-[0.2em] transition-colors hover:text-gold-dark [&::-webkit-details-marker]:hidden";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <details className={item}>
       <summary className={summary}>
         {title}
-        <span aria-hidden className="text-lg leading-none transition-transform group-open:rotate-45">+</span>
+        <span aria-hidden className="text-xl leading-none text-gold-dark transition-transform duration-300 group-open:rotate-45">+</span>
       </summary>
-      <div className="mt-3 space-y-2 text-sm leading-relaxed text-espresso/75">{children}</div>
+      <div className="mt-3.5 space-y-2 text-sm leading-relaxed text-espresso/75">{children}</div>
     </details>
   );
 }
@@ -20,7 +20,7 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 // Native <details>: accessible accordions with zero JavaScript.
 export function ProductDetails({ product: p }: { product: Product }) {
   return (
-    <div className="mt-8 border-t border-champagne/60">
+    <div className="mt-8 border-t border-gold/30">
       <Section title="Product details">
         <p>{p.description}</p>
         <ul className="list-disc pl-5">

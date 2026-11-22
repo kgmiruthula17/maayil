@@ -39,19 +39,19 @@ export function Footer() {
   return (
     <>
       <Newsletter />
-      <footer className="bg-burgundy text-ivory">
+      <footer className="bg-burgundy text-ivory border-t-2 border-t-gold/40">
         <Container className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Logo className="text-champagne" />
+            <Logo className="text-gold-light" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-ivory/75">
               Modern Indian ethnic fashion, specialising in women&apos;s kurtis. {siteConfig.tagline}
             </p>
-            <div className="mt-6 flex gap-4 text-champagne">
-              <a href={siteConfig.instagram} target="_blank" rel="noopener noreferrer" aria-label="Maayil on Instagram" className="hover:text-ivory">
+            <div className="mt-6 flex gap-4 text-gold-light">
+              <a href={siteConfig.instagram} target="_blank" rel="noopener noreferrer" aria-label="Maayil on Instagram" className="transition-colors duration-300 hover:text-white hover:scale-110">
                 <InstagramIcon className="size-6" />
               </a>
               {siteConfig.whatsapp && (
-                <a href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noopener noreferrer" aria-label="Chat with Maayil on WhatsApp" className="hover:text-ivory">
+                <a href={`https://wa.me/${siteConfig.whatsapp}`} target="_blank" rel="noopener noreferrer" aria-label="Chat with Maayil on WhatsApp" className="transition-colors duration-300 hover:text-white hover:scale-110">
                   <WhatsAppIcon className="size-6" />
                 </a>
               )}
@@ -60,11 +60,11 @@ export function Footer() {
 
           {columns.map((c) => (
             <nav key={c.title} aria-label={c.title}>
-              <h2 className="eyebrow mb-4 text-champagne!">{c.title}</h2>
+              <h2 className="eyebrow mb-4 text-gold-light! font-medium">{c.title}</h2>
               <ul className="space-y-2.5 text-sm">
                 {c.links.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className={link}>
+                    <Link href={l.href} className="text-ivory/75 transition-colors duration-300 hover:text-gold-light">
                       {l.label}
                     </Link>
                   </li>
@@ -74,10 +74,10 @@ export function Footer() {
           ))}
         </Container>
 
-        <div className="border-t border-champagne/20">
+        <div className="border-t border-gold/20">
           <Container className="flex flex-col gap-2 py-5 text-xs text-ivory/60 md:flex-row md:justify-between">
             <p>© {new Date().getFullYear()} MAAYIL. All rights reserved.</p>
-            {siteConfig.sampleData && <p>Demo store: products, prices and imagery are sample content.</p>}
+            {siteConfig.sampleData && <p className="text-gold-light/60">Demo store: products, prices and imagery are sample content.</p>}
           </Container>
         </div>
       </footer>

@@ -42,8 +42,8 @@ export function ProductGallery({ product }: { product: Product }) {
               aria-label={`Show image ${i + 1} of ${n}`}
               aria-current={active === i}
               className={cn(
-                "relative aspect-[4/5] w-full overflow-hidden bg-champagne/20 ring-offset-2 transition-opacity",
-                active === i ? "ring-1 ring-burgundy" : "opacity-70 hover:opacity-100",
+                "relative aspect-[4/5] w-full overflow-hidden bg-champagne/20 ring-offset-2 transition-all duration-300",
+                active === i ? "ring-2 ring-gold shadow-xs" : "opacity-70 hover:opacity-100",
               )}
             >
               <ProductImage product={product} index={i} sizes="84px" />
@@ -83,7 +83,7 @@ export function ProductGallery({ product }: { product: Product }) {
                 onClick={() => go(i)}
                 aria-label={`Show image ${i + 1} of ${n}`}
                 aria-current={active === i}
-                className={cn("h-1.5 rounded-full transition-all", active === i ? "w-6 bg-burgundy" : "w-1.5 bg-espresso/25")}
+                className={cn("h-1.5 rounded-full transition-all duration-300", active === i ? "w-6 bg-gold" : "w-1.5 bg-espresso/25")}
               />
             ))}
           </div>

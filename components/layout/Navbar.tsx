@@ -63,11 +63,15 @@ export function Navbar() {
           <button type="button" aria-label="Open menu" onClick={() => setMenu(true)} className={cn(iconBtn, "lg:hidden")}>
             <Menu className="size-6" strokeWidth={1.5} />
           </button>
-          <Logo className="hidden text-burgundy lg:block" />
+          <div className="hidden lg:flex items-center">
+            <Logo className="text-burgundy" />
+          </div>
         </div>
 
         <div className="flex items-center justify-center">
-          <Logo className="text-burgundy lg:hidden" />
+          <div className="flex items-center lg:hidden">
+            <Logo className="text-burgundy" />
+          </div>
           <nav aria-label="Primary" className="hidden lg:block">
             <ul className="flex items-center gap-9">
               {siteConfig.nav.map((l) => {

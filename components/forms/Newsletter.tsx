@@ -18,11 +18,20 @@ export function Newsletter() {
   };
 
   return (
-    <section id="newsletter" aria-labelledby="newsletter-title" className="bg-champagne/30 px-5 py-16 text-center md:py-20">
+    <section
+      id="newsletter"
+      aria-labelledby="newsletter-title"
+      className="relative overflow-hidden bg-gradient-to-b from-champagne/30 via-champagne/20 to-ivory border-y border-gold/30 px-5 py-16 text-center md:py-20"
+    >
+      <div className="mx-auto mb-3 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/70 px-3.5 py-1 text-[10px] uppercase tracking-[0.22em] text-gold-dark shadow-xs">
+        <span className="text-gold text-[8px]">✦</span>
+        <span>Privilege Club</span>
+        <span className="text-gold text-[8px]">✦</span>
+      </div>
       <h2 id="newsletter-title" className="mx-auto max-w-xl font-serif text-4xl leading-tight text-burgundy md:text-5xl">
         A Little More Maayil in Your Inbox.
       </h2>
-      <p className="mx-auto mt-4 max-w-md text-sm text-espresso/75">New arrivals and quiet offers, never noise.</p>
+      <p className="mx-auto mt-4 max-w-md text-sm text-espresso/75">New arrivals, styling notes and quiet offers, never noise.</p>
 
       <div className="mx-auto mt-8 max-w-md" aria-live="polite">
         <AnimatePresence mode="wait" initial={false}>
@@ -33,11 +42,11 @@ export function Newsletter() {
               animate={{ opacity: 1, y: 0 }}
               className="inline-flex items-center gap-2 font-serif text-2xl text-burgundy"
             >
-              <Check className="size-5 text-crimson" /> Thank you. You&apos;re on the list.
+              <Check className="size-5 text-gold-dark" /> Thank you. You&apos;re on the list.
             </m.p>
           ) : (
             <m.form key="form" noValidate onSubmit={onSubmit} exit={{ opacity: 0 }}>
-              <div className="flex border border-burgundy/40 bg-white focus-within:border-burgundy">
+              <div className="flex border border-gold/50 bg-white shadow-xs focus-within:border-gold focus-within:ring-2 focus-within:ring-gold/20 transition-all duration-300">
                 <label htmlFor="newsletter-email" className="sr-only">
                   Email address
                 </label>
@@ -54,7 +63,7 @@ export function Newsletter() {
                 />
                 <button
                   type="submit"
-                  className="bg-burgundy px-6 text-xs font-medium uppercase tracking-[0.18em] text-ivory transition-colors hover:bg-crimson"
+                  className="bg-gradient-to-r from-gold-dark via-gold-light to-gold px-6 text-xs font-semibold uppercase tracking-[0.18em] text-burgundy transition-all duration-300 hover:brightness-105 active:brightness-95 hover:shadow-[0_0_15px_rgba(197,160,89,0.35)]"
                 >
                   Subscribe
                 </button>

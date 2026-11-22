@@ -24,9 +24,11 @@ export function SizeSelector({
             aria-pressed={value === s}
             onClick={() => onChange(s)}
             className={cn(
-              "min-w-11 border text-xs transition-colors",
+              "min-w-11 border text-xs transition-all duration-300",
               compact ? "h-8 px-2" : "h-11 px-3",
-              value === s ? "border-burgundy bg-burgundy text-ivory" : "border-espresso/25 hover:border-burgundy",
+              value === s
+                ? "border-gold bg-burgundy text-gold-shimmer shadow-xs"
+                : "border-espresso/25 hover:border-gold hover:text-burgundy",
               !available && "text-espresso/30 line-through",
             )}
           >

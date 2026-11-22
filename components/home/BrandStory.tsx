@@ -11,18 +11,21 @@ export function BrandStory() {
     <section className="bg-white py-20 md:py-28">
       <Container className="grid items-center gap-14 lg:grid-cols-2 lg:gap-24">
         <Reveal image className="relative pb-8 pr-8 md:pr-12">
-          <div className="relative aspect-[4/5] overflow-hidden bg-champagne/20">
+          <div className="relative aspect-[4/5] overflow-hidden bg-champagne/20 border border-gold/40 shadow-[0_12px_40px_-10px_rgba(74,16,28,0.2)]">
             <ProductImage product={anarkali} index={1} sizes="(min-width:1024px) 40vw, 80vw" />
           </div>
-          <div className="absolute bottom-0 right-0 aspect-[4/5] w-1/3 overflow-hidden border-4 border-white bg-champagne/20">
+          <div className="absolute bottom-0 right-0 aspect-[4/5] w-1/3 overflow-hidden border-4 border-white bg-champagne/20 shadow-xl border-t-gold/40">
             <ProductImage product={chikan} index={2} sizes="20vw" />
           </div>
         </Reveal>
 
         <Reveal>
-          <p className="eyebrow">Our story</p>
+          <p className="eyebrow flex items-center gap-2">
+            <span className="text-gold text-[10px]">✦</span>
+            <span>Our story</span>
+          </p>
           <h2 className="mt-4 font-serif text-5xl leading-[1.05] text-burgundy md:text-6xl">
-            More Than Just a Kurti. <em className="text-crimson">It&apos;s Your Story.</em>
+            More Than Just a Kurti. <em className="italic gold-text">It&apos;s Your Story.</em>
           </h2>
           <p className="mt-6 max-w-lg leading-relaxed text-espresso/75">
             At Maayil, we believe every woman deserves to feel beautiful in what she wears. Our collections bring together thoughtful designs, graceful silhouettes and the charm of Indian ethnic fashion.
